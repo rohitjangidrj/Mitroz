@@ -1,0 +1,85 @@
+// Testimonial
+
+.testimonialSection {
+    .testimonialInner {
+        .wrapper {
+            max-width: 92%;
+            overflow: hidden;
+            margin: 48px auto;
+            padding: 0;
+            .wrapperContent {
+                max-width: calc(100% - 20%);
+                padding: 30px 20px 30px 0;
+                margin: auto 0 auto auto;
+                position: relative;
+                width: 100%;
+                &::before {
+                    content: '“';
+                    top: 28px;
+                    z-index: 0;
+                    left: -114px;
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    font-weight: 700;
+                    text-align: left;
+                    font-size: 135px;
+                    padding-left: 24px;
+                    position: absolute;
+                    line-height: 1.25em;
+                    @extend .borderRadius-100;
+                    color: $sub-primary-color;
+                    @extend .box-shadow-dark-inner;
+                }
+                .dateTestimonial {
+                    color: $sub-title-color;
+                }
+                .contentWrapper {
+                    min-height: 108px;
+                    max-height: 108px;
+                    overflow-y: hidden;
+                    margin-bottom: 15px;
+                }
+                .clientName {
+                    font-weight: 600;
+                    color: $primary-color;
+                    font-size: $Primary-font-size;
+                }
+                .clientDegination {
+                    color: $sub-primary-color;
+                }
+            }
+            .clientImg {
+                right: -8px;
+                bottom: -10px;
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                position: absolute;
+                @extend .borderRadius-100;
+                @extend .box-shadow-dark-inner;
+            }
+            &:hover {
+                transform: translateY(-30px);
+                .wrapperContent {
+                    .contentWrapper {
+                        overflow-y: scroll;
+                    }
+                }
+            }
+        }
+        .owl-dots {
+            .owl-dot {
+                margin: 0 4px;
+                padding: 6px !important;
+                @extend .borderRadius-100;
+                background: $primary-color;
+                @extend .box-shadow-dark-inner;
+                border: 1px solid  $primary-color;
+            }
+            .owl-dot.active{
+                border-color: $sub-primary-color;
+            }
+        }
+    }
+}

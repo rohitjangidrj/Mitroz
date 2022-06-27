@@ -1,0 +1,235 @@
+.footer-gap {
+  padding: 0px 0 8px;
+}
+
+.contentFooter {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  span {
+    font-weight: 600;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    i.fa {
+      font-size: $indexFooterIcons;
+      color: $white;
+    }
+  }
+  p {
+    color: $white;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: $indexFooterList;
+    a {
+      color: $white;
+    }
+    &:hover {
+      a {
+        color: $sub-primary-color;
+      }
+    }
+  }
+}
+
+.footerSection {
+  background-color: $primary-color;
+  .topFooter {
+    padding-bottom: 40px;
+
+    .wrapper {
+      .footerLogo {
+        max-width: calc(100% - 170px);
+        margin-bottom: 30px;
+      }
+
+      .footerContent {
+        p {
+          color: $white;
+          margin-bottom: 30px;
+          font-size: $indexFooterContent;
+        }
+
+        a.primaryBtn {
+          padding: 15px 52px;
+          color: $sub-primary-color;
+          text-transform: capitalize;
+        }
+      }
+
+      .titleFooter {
+        margin-bottom: 30px;
+        h4 {
+          font-weight: 400;
+          color: $white;
+          position: relative;
+          &::before {
+            content: "";
+            height: 2px;
+            bottom: -5px;
+            background: $sub-primary-color;
+            position: absolute;
+            width: calc(100% - 90%);
+          }
+        }
+      }
+      .contentFooter {
+        .icon {
+          display: none;
+        }
+        p {
+          br {
+            display: none;
+          }
+        }
+        
+        &:nth-last-child(1) {
+          display: none;
+        }
+      }
+      .quickLink {
+        .footerNav {
+          li {
+            a {
+              color: $white;
+              font-size: $indexFooterList;
+            }
+            ul {
+              display: none;
+            }
+            &:hover {
+              a {
+                color: $sub-primary-color;
+              }
+            }
+          }
+        }
+      }
+      .wrapperNewsletter {
+        form {
+          input[type="text"],
+          input[type="submit"] {
+            border: 0;
+            color: $white;
+            margin-right: 8px;
+            padding: 8px 15px;
+            background: #01172d;
+            @extend .borderRadius-25;
+            @include media-breakpoint-down (lg) {
+            margin-bottom: 8px;
+            }
+          }
+          input[type="submit"] {
+            background-color: $sub-primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .bottomFooter {
+    border-top: 1px solid $sub-primary-color;
+    padding-top: 8px;
+
+    .copyright {
+      color: $white;
+      font-size: $indexFooterCopyright;
+
+      a {
+        color: $sub-primary-color;
+      }
+    }
+
+    .space {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+
+
+.socialMedia {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  li {
+    margin-right: 8px;
+    a {
+      color: $white;
+      font-size: $indexFooterContent;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        border: 1px solid $white;
+        @extend .borderRadius-100;
+        i.fa {
+          color: $sub-primary-color;
+          font-size: $indexFooterIcons;
+        }
+      }
+      span {
+        display: none;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+.footerAnimation {
+  position: relative;
+    height: 210px;
+    overflow: hidden;
+    .waveAnimation {
+      width:100%;
+      position:absolute;
+      bottom: -5%;
+      left:0;
+      .waveBackground {
+        background: url(#{$assetPath}footerBackground.svg) repeat-x; 
+        position: absolute;
+        top: -198px;
+        width: 6400px;
+        height: 198px;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        transform: translate3d(0, 0, 0);
+        &:nth-of-type(2) {
+          top: -175px;
+          animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+          opacity: 1;
+        }
+      }
+    }
+}
+
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}

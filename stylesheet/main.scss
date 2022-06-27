@@ -1,0 +1,26 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+//
+// Grid mixins
+//
+@import "bootstrap/mixins/breakpoints";
+
+// Main Theme Style only
+
+@import "theme/flexbox";
+@import "theme/mixins";
+
+
+// Main color, Theme setting, variable and Reset theme / Font setting
+
+@import "theme/variables";
+@import "theme/elements";
+@import "theme/reset";
+@import "theme/border-shadow";
+@import "theme/font-size";
+
+
+// Header and Footer Common Design
+@import "theme/header";
+@import "theme/pages";
+@import "theme/footer";

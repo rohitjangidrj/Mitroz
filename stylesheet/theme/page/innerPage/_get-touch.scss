@@ -1,0 +1,106 @@
+// Contact Form
+
+.sectionContactForm{
+    .formWrapper {
+        position: relative;
+        margin-bottom: 30px;
+        .form-label {
+            top: -10px;
+            left: 28px;
+            color: $white;
+            line-height: 16px;
+            padding: 2px 12px;
+            border-radius: 3px;
+            position: absolute;
+            background: $primary-color;
+            font-size: $primary-size-12;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            @extend .borderRadius-8;
+            border: 1px solid $primary-color;
+            &:focus {
+                outline: 0px solid $sub-primary-color;
+                @extend .box-shadow;
+            }
+        }
+        .primaryBtn {
+            background-color: $sub-primary-color;
+            color: $white;
+            i.fa {
+                margin-right: 8px;
+                color: $white;
+            }
+        }
+    }
+}
+
+// Get In Touch
+
+.getInTouchSection {
+    .getTouchContact {
+        .contentFooter {
+            position: relative;
+            .icon {
+                background-color: $white;
+                position: absolute;
+                top: 0;
+                @extend .borderRadius-8;
+                box-shadow: 0px 0px 20px 4px #01203f33;
+                i.fa {                    
+                    color: $sub-primary-color;
+                }
+            }
+            p {
+                font-weight: 700;
+                margin-left: 60px;
+                color: $primary-color;
+                font-size: $Primary-font-size;
+                a {
+                    font-weight: normal;
+                    color: $primary-color;
+                }
+            }
+            &:hover{
+                .icon {
+                    background-color: $sub-primary-color;
+                    cursor: pointer;
+                    i.fa {                    
+                        color: $white;
+                    }
+                }
+            }
+            &:nth-last-child(1) {
+                p a {
+                    display: none;
+                }
+            }
+        }
+    }
+    .sectionContactForm {
+        .formWrapper {
+            .form-label {
+                display: none;
+            }
+        }
+    }
+}
+
+.getInTouchSocialMedia {
+    width: fit-content;
+    position: relative;
+    top: -8px;
+    left: 58px;
+    .socialMedia {
+        .icon {
+            width: 48px;
+            height: 48px;
+            background-color: $text-color;
+            @extend .borderRadius-8;
+            i.fa {
+                color: $white;
+            }
+        }
+    }
+}

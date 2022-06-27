@@ -1,0 +1,166 @@
+.servicesPageSection {
+    .sectionTitHeaDis {
+        max-width: calc(100% - 28%);
+        margin: auto;
+        .mainSubTitle {
+            color: $sub-primary-color;
+            font-size: $indexHeadingh3;
+        }
+    }
+}
+
+.servicesPageNav {
+    .serviceSectionCount {
+        .servicesPageServ {
+            .wrapper {
+                width: 240px;
+                height: 88px !important;
+                @extend .borderRadius-8;
+                &:hover {
+                    box-shadow: inset 0px 0px 18px #d2d2d254 !important;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.uiuxdesign {
+    .formcontent {
+        padding-right: 180px;
+        .customtile {
+            font-size: 18px !important;
+            color: #ea4335;
+        }
+    }
+    .cuspadding {
+        margin-bottom: 30px;
+    }
+    .formdatauiux {
+        input,
+        input:focus {
+            padding: 8px 16px;
+            border: 1px solid #01203f;
+            box-shadow: none !important;
+        }
+        textarea,
+        input:focus {
+            padding: 8px 16px;
+            border: 1px solid #01203f;
+            box-shadow: none !important;
+        }
+        .primaryBtn:hover {
+            transform: none !important;
+        }
+    }
+}
+
+.benefitsofbusiness {
+    .wrapper {
+        .icons {
+            width: 80px;
+            max-width: 80px;
+        }
+    }
+    .custompadd {
+        margin-bottom: 80px;
+    }
+}
+
+.cstomheading {
+    margin-bottom: 90px !important;
+}
+
+.imgcustom {
+    img {
+        width: 75%;
+        max-width: 75%;
+    }
+}
+
+.startupenterprise {
+    background-image: url(/assets/siteContent/bg_enterprise.jpg);
+    .Wrappercontnt {
+        background-color: #ffffffbd;
+        padding: 60px;
+        border-radius: 25px;
+    }
+}
+
+.formdatauiux {
+    input,
+    input:focus {
+        padding: 8px 16px;
+        border: 1px solid #01203f;
+        box-shadow: none !important;
+    }
+    textarea,
+    textarea:focus {
+        padding: 8px 16px;
+        border: 1px solid #01203f;
+        box-shadow: none !important;
+    }
+    select,
+    select:focus {
+        padding: 8px 16px;
+        border: 1px solid #01203f;
+        box-shadow: none !important;
+    }
+    .primaryBtn:hover {
+        transform: none !important;
+    }
+    .form-select {
+        height: auto;
+    }
+}
+
+.dotnet {
+    padding: 30px 0px 80px 0px;
+    .formcontent {
+        padding-right: 0px !important;
+    }
+    .headinggfour {
+        font-size: 16px;
+    }
+}
+
+// Work Page 
+#workPageSectionInner {
+    .wrapperServicesImg {
+        margin-top: 45px;
+        margin-bottom: 0px !important;
+        .wrapperImgBg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            height: initial;
+        }
+    }
+}
+
+// work inner Page
+.workpageinner.innerPageSection {
+    .section-gap {
+        padding: 50px 0 !important;
+    }
+    &::before {
+        content: '';
+        background-image: url(/assets/main/bannerWhiteBefore.png);
+        width: 100%;
+        height: 220px !important;
+        position: absolute;
+        bottom: -120px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .projectPageSection {
+        h3.subHeadingh3 {
+            font-size: 32px !important;
+            margin-bottom: 18px !important;
+            color: #01203f !important;
+        }
+    }
+}

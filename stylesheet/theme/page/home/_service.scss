@@ -1,0 +1,85 @@
+// Services 
+.serviceSection {
+    background-image: url('#{$assetPath}servicesBg.svg');
+    background-size: 38%;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: -25%;
+}
+
+.serviceSectionInner {
+    .wrapperServicesImg {
+        position: relative;
+        margin-top: 45px;
+        margin-bottom: 0px !important;
+        .wrapperImgBg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            height: initial;
+        }
+        .wrapperImg {
+            text-align: center;
+        }
+    }
+}
+
+// .serviceSectionInner {
+//     .serviceWrapperContent {}
+//     .wrapperServicesImg {
+//         position: relative;
+//         margin-bottom: 45px;
+//         .wrapperImgBg {
+//             position: absolute;
+//             height: 100%;
+//             z-index: -1;
+//             width: 100%;
+//         }
+//         .wrapperImg {}
+//     }
+// }
+.serviceSectionCount {
+    .countNumber {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        .wrapper {
+            width: 220px;
+            display: grid;
+            height: 220px;
+            text-align: center;
+            align-content: center;
+            margin: 30px auto 20px;
+            @extend .borderRadius-100;
+            @extend .box-shadow-dark-inner-round;
+            .number {
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: $primary-color;
+                font-size: $countNumber;
+            }
+        }
+    }
+}
+
+.dupDesign {
+    @extend .borderRadius-25;
+    background-image: url('#{$assetPath}section_02.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wrapper {
+        height: 148px !important;
+        border-radius: 0 !important;
+        box-shadow: unset !important;
+        .number,
+        .content {
+            color: $white !important;
+        }
+    }
+}

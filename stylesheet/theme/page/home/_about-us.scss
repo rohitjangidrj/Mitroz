@@ -1,0 +1,63 @@
+.companyLogoSection {
+    .companyLogo {
+        .wrapper {
+            width: 180px;
+            margin: auto;
+            display: grid;
+            cursor:     pointer;
+            align-items: center;
+            justify-content: center;
+            filter: grayscale(100%);
+            &:hover {
+                filter: grayscale(1%);
+            }
+        }
+    }
+}
+
+.aboutSection {
+    background-image: url('#{$assetPath}aboutBg.svg');
+    background-size: 40%;
+    background-position-x: 110%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    .countAbout {
+        .aboutCountNumber {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            @extend .box-shadow;
+            margin-bottom: 30px;
+            justify-content: center;
+            @extend .borderRadius-25;
+            background-image: url('#{$assetPath}section_02.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .wrapper {
+                width: 310px;
+                display: grid;
+                text-align: center;
+                align-content: center;
+                padding: 30px 15px 20px;
+                .numberCount {
+                    font-size: $countNumber;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                    margin: auto;
+                    align-items: center;
+                    padding: 20px 20px;
+                    color: $white;
+                }
+                .aboutCountContent {
+                    h3, p {
+                        color: $white;
+                    }
+                    h3 {
+                        font-size: $Primary-font-size;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+// About Us Pages
+
+// Mission Vision
+
+.missionVision {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    .cardWrapper {
+        max-width: 42%;
+        text-align: center;
+        margin: 0px 20px;
+        // height: fit-content;
+        .icon {
+            margin: auto;
+            width: 110px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 30px;
+            .iconBg {
+                animation: rotate 12s linear infinite;
+                position: relative;
+                left: 54px;
+                top: 54px;
+            }
+            .iconImg {
+                position: absolute;
+                height: 52px;
+                margin: auto;
+                width: 52px;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                top: 0;
+            }
+        }
+        &:nth-last-child(1) {
+            transform: translateY(22%);
+        }
+        .content {
+            .title {
+                margin-bottom: 12px;
+            }
+        }
+        &:hover {
+            .icon {
+                .iconBg {
+                    animation-duration: 7s;
+                }
+            }
+        }
+    }
+}
+
+.aboutUsPageUsp {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    .wrapper {
+        width: 24.5%;
+        overflow: hidden;
+        position: relative;
+        &:before {
+            content: '';
+            right: 0px;
+            bottom: -3px;
+            height: 110px;
+            position: absolute;
+            width: calc(100% - 100%);
+            transition: 0.3s all ease-in-out;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-image: url('#{$assetPath}aboutus-card-bg.svg');
+        }
+        .number {
+            top: 26px;
+            left: -8px;
+            width: 92px;
+            height: 92px;
+            display: flex;
+            flex-wrap: nowrap;
+            position: absolute;
+            align-items: center;
+            justify-content: flex-start;
+            &::before {
+                content: '';
+                left: -12px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transform: rotate(85deg);
+                @extend .borderRadius-100;
+                @extend .box-shadow-dark-inner;
+            }
+            span {
+                font-size: 58px;
+                font-weight: 700;
+                color: $light-green;
+            }
+        }
+        .content {
+            text-align: start;
+            .title {
+                color: $primary-color;
+                width: calc(100% - 25%);
+                margin: auto 0 48px auto;
+            }
+            .discrption {
+                color: $text-color;
+                max-height: 130px;
+                min-height: 130px;
+                overflow: hidden;
+            }
+        }
+        &:hover {
+            background-color: $primary-color;
+            cursor: pointer;
+            &:before {
+                width: calc(100% - 27%);
+            }
+            .number {
+                &::before {
+                    box-shadow: inset 0px 14px 9px #00000038;
+                }
+            }
+            .content {
+                .title, .discrption {
+                    color: $white;
+                    transition: 0s all ease-in-out;
+                }
+                .discrption {
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(1440deg);
+    }
+}
